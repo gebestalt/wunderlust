@@ -229,21 +229,63 @@
 
 		<section id="contact">
 			<h3>Contact Us</h3>
-First Name (Enter first name)
-Last Name (Enter last name)
+			<form>
+				<label for="firstName">First Name<span class=required>*</span></label>
+				<input type="text" id="firstName" name="firstName" autocomplete="firstName" required aria-required="true" aria-labelledby="firstName">
+				<label for="lastName">Last name<span class=required>*</span></label>
+				<input type="text" id="lastName" name="lastName" autocomplete="lastName" required aria-required="true" aria-labelledby="lastName">
+				
+				<fieldset aria-required="true">
+					<legend>Contact Method<span class="required">*</span></legend>
 
-Contact Method (Email, Text, Phone)
-Email Address (Enter Email)
-Phone Number (Enter telephone number)
+					<input type="radio" id="phoneMethod" name="contactMethod" value="Phone" required aria-labelledby="phoneMethodLabel">
+					<label id="phoneMethodLabel" for="phoneMethod">Phone</label>
 
-Destination (Barcelona, Granada, Ibiza, Madrid, Majorca, Seville, Tenerife, Valencia)
-Travel Time (Fall, Winter, Spring, Summer, Flexible)
+					<input type="radio" id="emailMethod" name="contactMethod" value="Email" aria-labelledby="emailMethodLabel">
+					<label id="emailMethodLabel" for="emailMethod">Email</label>
 
+					<input type="radio" id="textMethod" name="text">
+					<label id=textMethodLabel for="text">Text</label>
 
+				</fieldset>
+				
+				<label for="email">Email<span class="required">*</span></label>
+				<input type="email" id="email" name="email" required aria-required="true" aria-labelledby="email">
+				
+				<label for="phone">Phone<span class="required">*</span></label>
+				<input type="tel" id="phone" name="phone" required aria-required="true" pattern="^\d{10}$" title="Please enter a 10-digit phone number" aria-labelledby="phone">
 
-Copyright 2021 Wunderlust
-Privacy Statement
-Terms of Service
+				<label for="destination">Destination<span class="required">*</span></label>
+				<select id="destination" name="destination" required aria-required="true" aria-labelledby="destination">
+					<option value="" disabled selected>Select your destination</option>
+					<option value="barcelona">Barcelona</option> 
+					<option value="granada">Granada</option>
+					<option value="ibiza">Ibiza</option>
+					<option value="madrid">Madrid</option>
+					<option value="majorca">Majorca</option>
+					<option value="seville">Seville</option>
+					<option value="tenerife">Tenerife</option>
+					<option value="valencia">Valencia</option>
+				</select>
 
+				<label for="travelTime">Travel Time</label>
+				<select name="travelTime" id="travelTime" required>
+					<option value="">Select travel time...</option>
+					<option value="fall">Fall</option>
+					<option value="winter">Winter</option>
+					<option value="spring">Spring</option>
+					<option value="summer">Summer</option>
+					<option value="flexible">Flexible</option>
+				</select>
+
+				<input type="submit">
+			</form>
+		</section>
+	</main>
+	<footer>
+		<small>Copyright 2021 Wunderlust</small>
+		<small><a href="#">Statement</a></small>
+		<small><a href="#">Terms of Service</a></small>
+	</footer>
 </body>
 </html>
