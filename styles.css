@@ -157,7 +157,7 @@ nav a {
 	letter-spacing: 1px;
 	font-size: 1.15rem;
 }  
-  nav a:hover{
+  nav a:hover {
     background-color: var(--yellow);
     color: var(--black);
-  }
+}
