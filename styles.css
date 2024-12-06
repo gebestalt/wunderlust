@@ -502,7 +502,170 @@ footer a {
 	flex-direction: column;
 	justify-content: center;
 }
-  
+
+/* Mobile view */
+@media screen and (max-width: 600px) {
+    header {
+        text-align: center;
+        background-color: var(--teal);
+        padding: 20px;
+    }
+
+    #logo img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    #menu-toggle label {
+        display: block;
+        background-color: var(--dark-gray);
+        color: var(--white);
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #menu-toggle ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: var(--teal);
+    }
+
+    #menu-toggle input:checked ~ ul {
+        display: block;
+    }
+
+    #menu-toggle li {
+        border-bottom: 1px solid var(--white);
+    }
+
+    #menu-toggle li a {
+        display: block;
+        color: var(--black);
+        padding: 15px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    #intro {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    #intro h2 {
+        font-size: 20px;
+    }
+
+    #intro p {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    #plan {
+        background-color: var(--yellow);
+        padding: 15px;
+    }
+
+    #plan div {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr;
+    }
+
+    #plan section {
+        text-align: center;
+        padding: 15px;
+        background-color: var(--teal);
+        border-radius: 10px;
+        color: var(--white);
+    }
+
+    #plan section h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    #plan section img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #testimonials div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    #testimonials section {
+        text-align: center;
+        max-width: 80%;
+        margin: auto;
+    }
+
+    #testimonials img {
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+    }
+
+    #testimonials h4 {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    #about {
+        background-color: var(--blue);
+        color: var(--white);
+        padding: 15px;
+        text-align: center;
+    }
+
+    #about section {
+        margin: 10px 0;
+    }
+
+    #about section img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #about h4 {
+        font-size: 14px;
+    }
+
+    #contact {
+        padding: 15px;
+    }
+
+    #contact label {
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background-color: var(--purple);
+        color: var(--white);
+    }
+}
+
+/* Medium Width*/
+
 @media screen and (min-width: 700px) {
 	header {
 	  padding: 10px;
@@ -564,7 +727,7 @@ footer a {
 	}
   
 	#menu-toggle .active {
-	  background-color: #f6d64a;
+	  background-color: var(--yellow);
 	}
   
 	#intro {
@@ -824,8 +987,10 @@ footer a {
 	  text-decoration: none;
 	}
   }
+
+/* Large Screen */
   
-  @media screen and (min-width: 1335px) {
+@media screen and (min-width: 1335px) {
 	#logo {
 	  grid-column: 1;
 	  grid-row: 1 / 4;
